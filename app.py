@@ -121,5 +121,11 @@ with col2:
         before, after = len(input_text), len(result)
         label = '整形完了（ルビあり）' if with_furigana else '整形完了'
         st.caption(f'{label}　{before} 文字 → {after} 文字' + ('　※誤変換がある場合は手動で修正してください' if with_furigana else ''))
+        st.download_button(
+            label='📋 テキストをダウンロード',
+            data=result,
+            file_name='整形済みテキスト.txt',
+            mime='text/plain',
+        )
     else:
         st.text_area('', value='', height=500, placeholder='左にテキストを入力すると自動で整形されます', label_visibility='collapsed')
