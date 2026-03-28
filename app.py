@@ -102,6 +102,16 @@ def clean_text(text: str, with_furigana: bool = False) -> str:
 
 # --- UI ---
 st.set_page_config(page_title='TRPG テキスト整形ツール', layout='wide')
+
+# Streamlitのヘッダー・フッター・メニューを非表示
+st.markdown("""
+<style>
+#MainMenu {visibility: hidden;}
+header {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
+""", unsafe_allow_html=True)
+
 st.title('TRPG テキスト整形ツール')
 st.caption('PDFからコピーしたシナリオテキストの改行・スペース・ルビを整形します')
 
