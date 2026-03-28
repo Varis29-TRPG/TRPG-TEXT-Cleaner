@@ -110,6 +110,7 @@ st.markdown("""
 header {visibility: hidden;}
 footer {visibility: hidden;}
 [data-testid="stHeadingAnchorLink"] {display: none;}
+[data-testid="stCode"] code {white-space: pre-wrap !important; word-break: break-word !important;}
 </style>
 """, unsafe_allow_html=True)
 
